@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Architecture - Hortonworks Connected Data Cloud</title>
+  
+
+  <link rel="shortcut icon" href="../http:/hortonworks.com/wp-content/uploads/2016/04/cropped-favicon521x512-192x192.png">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Architecture";
+    var mkdocs_page_input_path = "architecture.md";
+    var mkdocs_page_url = "/architecture/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Hortonworks Connected Data Cloud</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Hortonworks Cloud for AWS</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Introduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Architecture</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#architecture">Architecture</a></li>
+                
+                    <li><a class="toctree-l4" href="#cloud-controller">Cloud Controller</a></li>
+                
+                    <li><a class="toctree-l4" href="#cluster-types">Cluster Types</a></li>
+                
+                    <li><a class="toctree-l4" href="#types-of-cluster-nodes">Types of Cluster Nodes</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../launch/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Hortonworks Cloud UI</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../create/">Creating a Cluster</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../using/">Accessing a Cluster</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../manage/">Managing Cluster Templates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Hortonworks Cloud Settings</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../terms/">Terms of Use</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../feedback/">Feedback</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional Resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quick/">Appendix- Cluster Quick Launch</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../acknowledge/">Appendix- Acknowledgements</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Hortonworks Connected Data Cloud</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Architecture</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="architecture">Architecture</h2>
+<p>The two primary components of Hortonworks Cloud are: the <strong>cloud controller</strong> (or "control plane");
+and one or more <strong>clusters</strong> being managed by that controller.</p>
+<p>The <strong>cloud controller</strong> runs on an EC2 Instance and is used as
+the central place for launching and managing the clusters. A <strong>cluster</strong> runs on
+multiple EC2 Instances and each cluster used for storing and processing data.</p>
+<p><img alt="Architecture" src="../arch.png" /></p>
+<h3 id="cloud-controller">Cloud Controller</h3>
+<p>Runs on a single EC2 Instance.</p>
+<h3 id="cluster-types">Cluster Types</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Cluster Type</th>
+<th align="center">Primary Services</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Data Science (Spark 1.6)</td>
+<td align="center">Spark, Zeppelin</td>
+<td align="center">XYZ</td>
+</tr>
+<tr>
+<td align="left">Data Science (Spark 2.0)</td>
+<td align="center">Spark, Zeppelin</td>
+<td align="center">XYZ</td>
+</tr>
+<tr>
+<td align="left">EDW (Core Hadoop, Hive, Pig)</td>
+<td align="center">MapReduce, Hive, Pig</td>
+<td align="center">XYZ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="types-of-cluster-nodes">Types of Cluster Nodes</h3>
+<ul>
+<li><strong>Master Node</strong>. Runs the components for managing the cluster, including Ambari, HDFS storage, processing tasks, as well as other
+master components depending on the cluster type.</li>
+<li><strong>Worker Node</strong>. Runs the components that are used to executing processing tasks (NodeManager) and handling
+storing data in HDFS (DataNode).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Cluster Type</th>
+<th align="center">Master Node</th>
+<th align="center">Worker Node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Data Science (Spark 1.6)</td>
+<td align="center">NameNode, ResourceManager, SparkHistoryServer</td>
+<td align="center">NodeManager, DataNode</td>
+</tr>
+<tr>
+<td align="left">Data Science (Spark 2.0)</td>
+<td align="center">NameNode, ResourceManager, SparkHistoryServer</td>
+<td align="center">NodeManager, DataNode</td>
+</tr>
+<tr>
+<td align="left">EDW (Core Hadoop, Hive, Pig)</td>
+<td align="center">NameNode, ResourceManager, HiveServer2</td>
+<td align="center">NodeManager, DataNode</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../launch/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../intro/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© 2011-2016 Hortonworks Inc. All Rights Reserved.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../intro/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../launch/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

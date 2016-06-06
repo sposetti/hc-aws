@@ -1,0 +1,189 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Hortonworks Connected Data Cloud\n\n\nfor Amazon Web Services\n\n\nTechnical Preview 0.1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwww.hortonworks.com", 
+            "title": "Hortonworks Cloud for AWS"
+        }, 
+        {
+            "location": "/intro/", 
+            "text": "Introduction\n\n\nHortonworks Connected Data Cloud\n (Hortonworks Cloud) is a system for launching and\nmanaging a data lake on Amazon Web Services (AWS). Using Hortonworks Cloud, you can launch\nclusters for analyzing and processing data with Apache Hadoop, Apache Hive and Apache Spark\npowered by the \nHortonworks Data Platform\n.\n\n\n\n\nNote: You are responsible for AWS charges while running Hortonworks Cloud and the clusters\nbeing managed by Hortonworks Cloud.\n\n\n\n\nPrerequisites\n\n\nTo use Hortonworks Cloud, you need the following:\n\n\n\n\nAmazon Web Services Account.\n If you already have an AWS account, login to the \nAWS\nManagement Console\n. Alternatively, you can create a new AWS account following the\ninstructions provided by AWS.\n\n\nAmazon Key Pair in your AWS Account.\n The Amazon EC2 instances that you create for Hortonworks Cloud\nwill be accessible by the key pair you provide during installation. Refer to\nthe \nAWS documentation\n\nfor instructions on how to create a key pair. \n\n\n\n\nAWS Services\n\n\nThe following AWS services are used by Hortonworks Cloud:\n\n\n\n\nAmazon EC2\n\n\nAmazon S3\n\n\nAmazon VPC\n\n\nAWS Lambda\n\n\nAWS CloudFormation\n\n\nIdentity \n Access Management", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/intro/#introduction", 
+            "text": "Hortonworks Connected Data Cloud  (Hortonworks Cloud) is a system for launching and\nmanaging a data lake on Amazon Web Services (AWS). Using Hortonworks Cloud, you can launch\nclusters for analyzing and processing data with Apache Hadoop, Apache Hive and Apache Spark\npowered by the  Hortonworks Data Platform .   Note: You are responsible for AWS charges while running Hortonworks Cloud and the clusters\nbeing managed by Hortonworks Cloud.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/intro/#prerequisites", 
+            "text": "To use Hortonworks Cloud, you need the following:   Amazon Web Services Account.  If you already have an AWS account, login to the  AWS\nManagement Console . Alternatively, you can create a new AWS account following the\ninstructions provided by AWS.  Amazon Key Pair in your AWS Account.  The Amazon EC2 instances that you create for Hortonworks Cloud\nwill be accessible by the key pair you provide during installation. Refer to\nthe  AWS documentation \nfor instructions on how to create a key pair.", 
+            "title": "Prerequisites"
+        }, 
+        {
+            "location": "/intro/#aws-services", 
+            "text": "The following AWS services are used by Hortonworks Cloud:   Amazon EC2  Amazon S3  Amazon VPC  AWS Lambda  AWS CloudFormation  Identity   Access Management", 
+            "title": "AWS Services"
+        }, 
+        {
+            "location": "/architecture/", 
+            "text": "Architecture\n\n\nThe two primary components of Hortonworks Cloud are: the \ncloud controller\n (or \"control plane\");\nand one or more \nclusters\n being managed by that controller.\n\n\nThe \ncloud controller\n runs on an EC2 Instance and is used as\nthe central place for launching and managing the clusters. A \ncluster\n runs on\nmultiple EC2 Instances and each cluster used for storing and processing data.\n\n\n\n\nCloud Controller\n\n\nRuns on a single EC2 Instance.\n\n\nCluster Types\n\n\n\n\n\n\n\n\nCluster Type\n\n\nPrimary Services\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nData Science (Spark 1.6)\n\n\nSpark, Zeppelin\n\n\nXYZ\n\n\n\n\n\n\nData Science (Spark 2.0)\n\n\nSpark, Zeppelin\n\n\nXYZ\n\n\n\n\n\n\nEDW (Core Hadoop, Hive, Pig)\n\n\nMapReduce, Hive, Pig\n\n\nXYZ\n\n\n\n\n\n\n\n\nTypes of Cluster Nodes\n\n\n\n\nMaster Node\n. Runs the components for managing the cluster, including Ambari, HDFS storage, processing tasks, as well as other\nmaster components depending on the cluster type.\n\n\nWorker Node\n. Runs the components that are used to executing processing tasks (NodeManager) and handling\nstoring data in HDFS (DataNode).\n\n\n\n\n\n\n\n\n\n\nCluster Type\n\n\nMaster Node\n\n\nWorker Node\n\n\n\n\n\n\n\n\n\n\nData Science (Spark 1.6)\n\n\nNameNode, ResourceManager, SparkHistoryServer\n\n\nNodeManager, DataNode\n\n\n\n\n\n\nData Science (Spark 2.0)\n\n\nNameNode, ResourceManager, SparkHistoryServer\n\n\nNodeManager, DataNode\n\n\n\n\n\n\nEDW (Core Hadoop, Hive, Pig)\n\n\nNameNode, ResourceManager, HiveServer2\n\n\nNodeManager, DataNode", 
+            "title": "Architecture"
+        }, 
+        {
+            "location": "/architecture/#architecture", 
+            "text": "The two primary components of Hortonworks Cloud are: the  cloud controller  (or \"control plane\");\nand one or more  clusters  being managed by that controller.  The  cloud controller  runs on an EC2 Instance and is used as\nthe central place for launching and managing the clusters. A  cluster  runs on\nmultiple EC2 Instances and each cluster used for storing and processing data.", 
+            "title": "Architecture"
+        }, 
+        {
+            "location": "/architecture/#cloud-controller", 
+            "text": "Runs on a single EC2 Instance.", 
+            "title": "Cloud Controller"
+        }, 
+        {
+            "location": "/architecture/#cluster-types", 
+            "text": "Cluster Type  Primary Services  Description      Data Science (Spark 1.6)  Spark, Zeppelin  XYZ    Data Science (Spark 2.0)  Spark, Zeppelin  XYZ    EDW (Core Hadoop, Hive, Pig)  MapReduce, Hive, Pig  XYZ", 
+            "title": "Cluster Types"
+        }, 
+        {
+            "location": "/architecture/#types-of-cluster-nodes", 
+            "text": "Master Node . Runs the components for managing the cluster, including Ambari, HDFS storage, processing tasks, as well as other\nmaster components depending on the cluster type.  Worker Node . Runs the components that are used to executing processing tasks (NodeManager) and handling\nstoring data in HDFS (DataNode).      Cluster Type  Master Node  Worker Node      Data Science (Spark 1.6)  NameNode, ResourceManager, SparkHistoryServer  NodeManager, DataNode    Data Science (Spark 2.0)  NameNode, ResourceManager, SparkHistoryServer  NodeManager, DataNode    EDW (Core Hadoop, Hive, Pig)  NameNode, ResourceManager, HiveServer2  NodeManager, DataNode", 
+            "title": "Types of Cluster Nodes"
+        }, 
+        {
+            "location": "/launch/", 
+            "text": "Getting Started\n\n\nUse the instructions below to launch a \ncloud controller\n. Once created,\nyou can use the controller to spin-up, use and spin-down one or more clusters.\n\n\n\n\nThere is an option to launch the \ncloud controller\n and a single \ncluster\n together (i.e. \"Quick Launch\").\nRefer to \nCluster Quick Launch\n for more information.\n\n\n\n\nSetup Prerequisites\n\n\n\n\n\n\nReview the Hortonworks Cloud \nTerms of Use\n.\n\n\n\n\n\n\nSetup AWS Account. If you already have an AWS account, login to the \nAWS\nManagement Console\n. Alternatively, you can create a new AWS account following the\ninstructions provided by AWS.\n\n\n\n\n\n\nSetup key pair. The Amazon EC2 instances that you create \nwill be accessible by the key pair you provide during installation. Refer to\nthe \nAWS documentation\n\nfor instructions on how to create a key pair. \n\n\n\n\n\n\nLaunching the Cloud Controller\n\n\n\n\n\n\nWe provide a CloudFormation template to create the AWS resources and EC2 Instance to run the cloud controller. Click to launch the \nCloudFormation template\n.\n\n\n\n\n\n\nClick \nNext\n. The \nSpecify Details\n page is shown.\n\n\n\n\n\n\nEnter the following \nParameters\n.\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nSSH Key Name\n\n\nName of an existing EC2 key pair to enable SSH to access the instances\n\n\n\n\n\n\nVPC\n\n\nPLACEHOLDER\n\n\n\n\n\n\nRemote Location\n\n\nEnter the CIDR mask to allow for remote access. For example 0.0.0.0/0 allows for full access.\n\n\n\n\n\n\nAdmin Username\n\n\nEnter an email address to use as the admin username.\n\n\n\n\n\n\nAdmin Password\n\n\nEnter the admin password. Minimum 8 characters with at least 1 uppercase, 1 numeric and 1 special character.\n\n\n\n\n\n\n\n\n\n\n\n\nClick \nNext\n. The \nOptions\n page is shown.\n\n\n\n\n\n\nClick \nNext\n. The \nReview\n page is shown.\n\n\n\n\n\n\nClick the \nI acknowledge\n checkbox and click \nCreate\n.\n\n\n\n\nThe \nStack Name\n is shown in the table with a CREATE_IN_PROGRESS \nStatus\n. The create process\ncan take a few minutes and once ready, you will see CREATE_COMPLETE.\n\n\n\n\n\n\n\n\nOnce complete, browse instance created at the \nCloudbreakURL\n provided in the \nOutputs\n. \n\n\n\n\n\n\nLog In\n\n\n\n\n\n\nBrowse to cloud controller instance created.\n\n\n\n\n\n\nLog in using the Admin Username and Password provided during the controller launch.\n\n\n\n\n\n\nOn first login, you will be prompted to accept the \nTerms of Use\n to continue.\n\n\n\n\n\n\nOnce accepted, you will be shown the Hortonworks Cloud UI.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/launch/#getting-started", 
+            "text": "Use the instructions below to launch a  cloud controller . Once created,\nyou can use the controller to spin-up, use and spin-down one or more clusters.   There is an option to launch the  cloud controller  and a single  cluster  together (i.e. \"Quick Launch\").\nRefer to  Cluster Quick Launch  for more information.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/launch/#setup-prerequisites", 
+            "text": "Review the Hortonworks Cloud  Terms of Use .    Setup AWS Account. If you already have an AWS account, login to the  AWS\nManagement Console . Alternatively, you can create a new AWS account following the\ninstructions provided by AWS.    Setup key pair. The Amazon EC2 instances that you create \nwill be accessible by the key pair you provide during installation. Refer to\nthe  AWS documentation \nfor instructions on how to create a key pair.", 
+            "title": "Setup Prerequisites"
+        }, 
+        {
+            "location": "/launch/#launching-the-cloud-controller", 
+            "text": "We provide a CloudFormation template to create the AWS resources and EC2 Instance to run the cloud controller. Click to launch the  CloudFormation template .    Click  Next . The  Specify Details  page is shown.    Enter the following  Parameters .     Parameter  Description      SSH Key Name  Name of an existing EC2 key pair to enable SSH to access the instances    VPC  PLACEHOLDER    Remote Location  Enter the CIDR mask to allow for remote access. For example 0.0.0.0/0 allows for full access.    Admin Username  Enter an email address to use as the admin username.    Admin Password  Enter the admin password. Minimum 8 characters with at least 1 uppercase, 1 numeric and 1 special character.       Click  Next . The  Options  page is shown.    Click  Next . The  Review  page is shown.    Click the  I acknowledge  checkbox and click  Create .   The  Stack Name  is shown in the table with a CREATE_IN_PROGRESS  Status . The create process\ncan take a few minutes and once ready, you will see CREATE_COMPLETE.     Once complete, browse instance created at the  CloudbreakURL  provided in the  Outputs .", 
+            "title": "Launching the Cloud Controller"
+        }, 
+        {
+            "location": "/launch/#log-in", 
+            "text": "Browse to cloud controller instance created.    Log in using the Admin Username and Password provided during the controller launch.    On first login, you will be prompted to accept the  Terms of Use  to continue.    Once accepted, you will be shown the Hortonworks Cloud UI.", 
+            "title": "Log In"
+        }, 
+        {
+            "location": "/create/", 
+            "text": "Creating a Cluster\n\n\n\n\n\n\nBrowse to your running Hortonworks Cloud controller instance and Log In.\n\n\n\n\n\n\nClick \nCREATE CLUSTER\n.\n\n\n\n\n\n\nFor \nGENERAL CONFIGURATION\n, enter the following parameters.\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nCluster Name\n\n\nEnter the name for this cluster.\n\n\n\n\n\n\nHDP Version\n\n\nEnter the name for this cluster.\n\n\n\n\n\n\nCluster Type\n\n\nChoose the type of cluster. See \nCluster Type\n for more information.\n\n\n\n\n\n\n\n\n\n\n\n\nFor \nHARDWARE\n, the default options allow you to select the Instance Type for all Nodes and Count for Worker Nodes\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nInstance Type\n\n\nChoose the instance type for all nodes (Master and Worker).\n\n\n\n\n\n\nInstance Count\n\n\nEnter the number of Worker nodes. The cluster will be created with 1 Master and this number of Worker nodes.\n\n\n\n\n\n\n\n\nYou can expand to \nSHOW ADVANCED OPTIONS\n for more granular control of instances and storage.\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nMaster Instance Type\n\n\nChoose the instance type for the Master node.\n\n\n\n\n\n\nWorker Instance Type\n\n\nChoose the instance type for the Worker nodes.\n\n\n\n\n\n\nInstance Count\n\n\nEnter the number of Worker nodes. The cluster will be created with 1 Master and this number of Worker nodes.\n\n\n\n\n\n\nStorage\n\n\nTBD\n\n\n\n\n\n\n\n\n\n\n\n\nFor \nNETWORK \n SECURITY\n, the default options allow you to select the Instance Type for all Nodes and Count for Worker Nodes\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nSSH Key Name\n\n\nName of an existing EC2 key pair to enable SSH to access the cluster instances.\n\n\n\n\n\n\nRemote Location\n\n\nEnter the CIDR mask to allow for remote access. For example \n0.0.0.0/0\n will allow for full access.\n\n\n\n\n\n\nWeb Access\n\n\nCheck this option to provide open access to the cluster Web UI ports.\n\n\n\n\n\n\n\n\nYou can expand to \nSHOW ADVANCED OPTIONS\n for additional options.\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nInstance Role\n\n\nTBD\n\n\n\n\n\n\n\n\n\n\n\n\nClick \nCREATE CLUSTER\n.", 
+            "title": "Creating a Cluster"
+        }, 
+        {
+            "location": "/create/#creating-a-cluster", 
+            "text": "Browse to your running Hortonworks Cloud controller instance and Log In.    Click  CREATE CLUSTER .    For  GENERAL CONFIGURATION , enter the following parameters.     Parameter  Description      Cluster Name  Enter the name for this cluster.    HDP Version  Enter the name for this cluster.    Cluster Type  Choose the type of cluster. See  Cluster Type  for more information.       For  HARDWARE , the default options allow you to select the Instance Type for all Nodes and Count for Worker Nodes     Parameter  Description      Instance Type  Choose the instance type for all nodes (Master and Worker).    Instance Count  Enter the number of Worker nodes. The cluster will be created with 1 Master and this number of Worker nodes.     You can expand to  SHOW ADVANCED OPTIONS  for more granular control of instances and storage.     Parameter  Description      Master Instance Type  Choose the instance type for the Master node.    Worker Instance Type  Choose the instance type for the Worker nodes.    Instance Count  Enter the number of Worker nodes. The cluster will be created with 1 Master and this number of Worker nodes.    Storage  TBD       For  NETWORK   SECURITY , the default options allow you to select the Instance Type for all Nodes and Count for Worker Nodes     Parameter  Description      SSH Key Name  Name of an existing EC2 key pair to enable SSH to access the cluster instances.    Remote Location  Enter the CIDR mask to allow for remote access. For example  0.0.0.0/0  will allow for full access.    Web Access  Check this option to provide open access to the cluster Web UI ports.     You can expand to  SHOW ADVANCED OPTIONS  for additional options.     Parameter  Description      Instance Role  TBD       Click  CREATE CLUSTER .", 
+            "title": "Creating a Cluster"
+        }, 
+        {
+            "location": "/using/", 
+            "text": "Connect to Cluster Web UIs\n\n\n\n\n\n\n\n\nWeb UI\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nAmbari Web\n\n\n\n\n\n\n\n\nAmbari Hive View\n\n\n\n\n\n\n\n\nAmbari Files View\n\n\n\n\n\n\n\n\nAmbari Pig View\n\n\n\n\n\n\n\n\nAmbari Tez View\n\n\n\n\n\n\n\n\nZeppelin\n\n\nData Science Clusters Only\n\n\n\n\n\n\n\n\nConnect to Cluster via SSH\n\n\nTBD\n\n\nScaling the Cluster\n\n\nTBD\n\n\nClone Cluster\n\n\nTBD\n\n\nTerminate Cluster\n\n\nTBD", 
+            "title": "Accessing a Cluster"
+        }, 
+        {
+            "location": "/using/#connect-to-cluster-web-uis", 
+            "text": "Web UI  Description      Ambari Web     Ambari Hive View     Ambari Files View     Ambari Pig View     Ambari Tez View     Zeppelin  Data Science Clusters Only", 
+            "title": "Connect to Cluster Web UIs"
+        }, 
+        {
+            "location": "/using/#connect-to-cluster-via-ssh", 
+            "text": "TBD", 
+            "title": "Connect to Cluster via SSH"
+        }, 
+        {
+            "location": "/using/#scaling-the-cluster", 
+            "text": "TBD", 
+            "title": "Scaling the Cluster"
+        }, 
+        {
+            "location": "/using/#clone-cluster", 
+            "text": "TBD", 
+            "title": "Clone Cluster"
+        }, 
+        {
+            "location": "/using/#terminate-cluster", 
+            "text": "TBD", 
+            "title": "Terminate Cluster"
+        }, 
+        {
+            "location": "/manage/", 
+            "text": "Managing Cluster Templates\n\n\nTBD", 
+            "title": "Managing Cluster Templates"
+        }, 
+        {
+            "location": "/manage/#managing-cluster-templates", 
+            "text": "TBD", 
+            "title": "Managing Cluster Templates"
+        }, 
+        {
+            "location": "/settings/", 
+            "text": "Settings\n\n\nTBD\n\n\n\n\nChange Password\n\n\nOpt in / out for SmartSense\n\n\nSet SmartSense ID", 
+            "title": "Hortonworks Cloud Settings"
+        }, 
+        {
+            "location": "/settings/#settings", 
+            "text": "TBD   Change Password  Opt in / out for SmartSense  Set SmartSense ID", 
+            "title": "Settings"
+        }, 
+        {
+            "location": "/terms/", 
+            "text": "Terms of Use\n\n\nPLACEHOLDER", 
+            "title": "Terms of Use"
+        }, 
+        {
+            "location": "/terms/#terms-of-use", 
+            "text": "PLACEHOLDER", 
+            "title": "Terms of Use"
+        }, 
+        {
+            "location": "/feedback/", 
+            "text": "Feedback\n\n\nHCC", 
+            "title": "Feedback"
+        }, 
+        {
+            "location": "/feedback/#feedback", 
+            "text": "HCC", 
+            "title": "Feedback"
+        }, 
+        {
+            "location": "/resources/", 
+            "text": "Additional Resources\n\n\nProvide links to other useful RESOURCES about Hortonworks, AWS, etc", 
+            "title": "Additional Resources"
+        }, 
+        {
+            "location": "/resources/#additional-resources", 
+            "text": "Provide links to other useful RESOURCES about Hortonworks, AWS, etc", 
+            "title": "Additional Resources"
+        }, 
+        {
+            "location": "/quick/", 
+            "text": "Quick Launch\n\n\nThere is an option to launch the \ncloud controller\n and the \ncluster\n together (a \"Quick Launch\").\nThis is a typical DevOps scenario where you want to spin-up the cluster, use it and spin-down\nthe cluster and you do not plan to keep the \ncloud controller\n running.\n\n\n\n\nClick to launch the \nCloudFormation template\n.\n\n\nClick \nNext\n. The \nSpecify Details\n page is shown.\n\n\n\n\nEnter the following \nParameters\n.\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nSSH Key Name\n\n\nName of an existing EC2 key pair to enable SSH to access the instances.\n\n\n\n\n\n\nVPC\n\n\nPLACEHOLDER\n\n\n\n\n\n\nRemote Location\n\n\nEnter the CIDR mask to allow for remote access. For example 0.0.0.0/0 allows for full access.\n\n\n\n\n\n\nAdmin Username\n\n\nEnter an email address to use as the admin username.\n\n\n\n\n\n\nAdmin Password\n\n\nEnter the admin password that has at least 8 characters long with at least 1 uppercase, 1 numeric and 1 special character.\n\n\n\n\n\n\n\n\n\n\n\n\nClick \nNext\n. The \nOptions\n page is shown.\n\n\n\n\nClick \nNext\n. The \nReview\n page is shown.\n\n\n\n\nClick the \nI acknowledge\n checkbox and click \nCreate\n.\n\n\n\n\nThe \nStack Name\n is shown in the table with a CREATE_IN_PROGRESS \nStatus\n. The create process\n can take a few minutes and once ready, you will see CREATE_COMPLETE.\n\n\n\n\n\n\n\n\nCluster is ready to use.", 
+            "title": "Appendix- Cluster Quick Launch"
+        }, 
+        {
+            "location": "/quick/#quick-launch", 
+            "text": "There is an option to launch the  cloud controller  and the  cluster  together (a \"Quick Launch\").\nThis is a typical DevOps scenario where you want to spin-up the cluster, use it and spin-down\nthe cluster and you do not plan to keep the  cloud controller  running.   Click to launch the  CloudFormation template .  Click  Next . The  Specify Details  page is shown.   Enter the following  Parameters .     Parameter  Description      SSH Key Name  Name of an existing EC2 key pair to enable SSH to access the instances.    VPC  PLACEHOLDER    Remote Location  Enter the CIDR mask to allow for remote access. For example 0.0.0.0/0 allows for full access.    Admin Username  Enter an email address to use as the admin username.    Admin Password  Enter the admin password that has at least 8 characters long with at least 1 uppercase, 1 numeric and 1 special character.       Click  Next . The  Options  page is shown.   Click  Next . The  Review  page is shown.   Click the  I acknowledge  checkbox and click  Create .   The  Stack Name  is shown in the table with a CREATE_IN_PROGRESS  Status . The create process\n can take a few minutes and once ready, you will see CREATE_COMPLETE.     Cluster is ready to use.", 
+            "title": "Quick Launch"
+        }, 
+        {
+            "location": "/acknowledge/", 
+            "text": "Acknowledgements\n\n\nAnything related to acknowledgments, license, etc", 
+            "title": "Appendix- Acknowledgements"
+        }, 
+        {
+            "location": "/acknowledge/#acknowledgements", 
+            "text": "Anything related to acknowledgments, license, etc", 
+            "title": "Acknowledgements"
+        }
+    ]
+}

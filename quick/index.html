@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Appendix- Cluster Quick Launch - Hortonworks Connected Data Cloud</title>
+  
+
+  <link rel="shortcut icon" href="../http:/hortonworks.com/wp-content/uploads/2016/04/cropped-favicon521x512-192x192.png">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Appendix- Cluster Quick Launch";
+    var mkdocs_page_input_path = "quick.md";
+    var mkdocs_page_url = "/quick/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Hortonworks Connected Data Cloud</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Hortonworks Cloud for AWS</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Introduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../architecture/">Architecture</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../launch/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Hortonworks Cloud UI</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../create/">Creating a Cluster</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../using/">Accessing a Cluster</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../manage/">Managing Cluster Templates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Hortonworks Cloud Settings</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../terms/">Terms of Use</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../feedback/">Feedback</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional Resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Appendix- Cluster Quick Launch</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#quick-launch">Quick Launch</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../acknowledge/">Appendix- Acknowledgements</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Hortonworks Connected Data Cloud</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Appendix- Cluster Quick Launch</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="quick-launch">Quick Launch</h2>
+<p>There is an option to launch the <strong>cloud controller</strong> and the <strong>cluster</strong> together (a "Quick Launch").
+This is a typical DevOps scenario where you want to spin-up the cluster, use it and spin-down
+the cluster and you do not plan to keep the <strong>cloud controller</strong> running.</p>
+<ol>
+<li>Click to launch the <a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3-eu-west-1.amazonaws.com/cloudbreak-cloudformation/cbd-quick-0.1.template" target="_blank">CloudFormation template</a>.</li>
+<li>Click <strong>Next</strong>. The <strong>Specify Details</strong> page is shown.</li>
+<li>
+<p>Enter the following <strong>Parameters</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSH Key Name</td>
+<td>Name of an existing EC2 key pair to enable SSH to access the instances.</td>
+</tr>
+<tr>
+<td>VPC</td>
+<td>PLACEHOLDER</td>
+</tr>
+<tr>
+<td>Remote Location</td>
+<td>Enter the CIDR mask to allow for remote access. For example 0.0.0.0/0 allows for full access.</td>
+</tr>
+<tr>
+<td>Admin Username</td>
+<td>Enter an email address to use as the admin username.</td>
+</tr>
+<tr>
+<td>Admin Password</td>
+<td>Enter the admin password that has at least 8 characters long with at least 1 uppercase, 1 numeric and 1 special character.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Next</strong>. The <strong>Options</strong> page is shown.</p>
+</li>
+<li>Click <strong>Next</strong>. The <strong>Review</strong> page is shown.</li>
+<li>
+<p>Click the <strong>I acknowledge</strong> checkbox and click <strong>Create</strong>.</p>
+<blockquote>
+<p>The <strong>Stack Name</strong> is shown in the table with a CREATE_IN_PROGRESS <strong>Status</strong>. The create process
+ can take a few minutes and once ready, you will see CREATE_COMPLETE.</p>
+</blockquote>
+</li>
+<li>
+<p>Cluster is ready to use.</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../acknowledge/" class="btn btn-neutral float-right" title="Appendix- Acknowledgements">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../resources/" class="btn btn-neutral" title="Additional Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© 2011-2016 Hortonworks Inc. All Rights Reserved.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../resources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../acknowledge/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
