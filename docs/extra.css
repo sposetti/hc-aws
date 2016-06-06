@@ -1,0 +1,50 @@
+
+.wy-side-nav-search {
+  background: #3fae2a;
+}
+
+.wy-side-nav-search input[type="text"] {
+  border-color: #3fae2a;
+}
+
+blockquote {
+  border-left: 4px solid #ddd;
+  color: #777;
+  padding: 0 15px;
+}
+
+.rst-content footer div p {
+    font-size: 0.9em;
+}
+
+.rst-content footer {
+    font-size: 0.9em;
+}
+
+.wy-breadcrumbs li {
+  font-weight: bold;
+}
+
+#title-page {
+  text-align: center;
+  margin-top: 75px;
+}
+
+#title-page .title-text {
+  font-size: 32px;
+  
+}
+
+#title-page .title-text .subtext {
+  font-size: .8em;
+  margin-bottom: 50px;
+}
+
+#title-page .title-text .bottom-text {
+  font-size: .5em;
+  margin-top: 100px;
+}
+
+.rst-content a:visited, a {
+    color: #3fae2a;
+}

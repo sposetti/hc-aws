@@ -1,0 +1,21 @@
+site_name: Hortonworks Connected Data Cloud
+site_favicon: http://hortonworks.com/wp-content/uploads/2016/04/cropped-favicon521x512-192x192.png
+theme: readthedocs
+extra_css: [extra.css]
+dev_addr: 0.0.0.0:8000
+copyright: © 2011-2016 Hortonworks Inc. All Rights Reserved.
+pages:
+    - Hortonworks Cloud for AWS: index.md
+    - Introduction: intro.md
+    - Architecture: architecture.md
+    - Getting Started: launch.md
+    - Using the Hortonworks Cloud UI:
+      - Creating a Cluster: create.md
+      - Accessing a Cluster: using.md
+      - Managing Cluster Templates: manage.md
+      - Hortonworks Cloud Settings: settings.md
+    - Terms of Use: terms.md
+    - Feedback: feedback.md
+    - Additional Resources: resources.md
+    - Appendix- Cluster Quick Launch: quick.md
+    - Appendix- Acknowledgements: acknowledge.md
